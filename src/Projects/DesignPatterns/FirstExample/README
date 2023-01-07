@@ -1,0 +1,16 @@
+Scenario:
+You are designing a system for grocery store that needs to calculate the total price of an order, taking into account various discounts and promotions.
+For this, the Strategy design pattern works by separating the logic for calculating discounts from the ‘Order’ class, and encapsulating it in separate concrete implementations of the ‘DiscountStrategy’ interface. 
+This allows the ‘Order’ class to apply different discounts to the total price of an order, depending on the specific strategy being used.
+
+The Strategy design pattern is a good idea in this case because it allow you to easily add new discounts or promotions to the system, without having to modify the ‘Order’ class. This makes the code more flexible and easier to maintain, since you can add new discounts simply by creating new concrete implementations of the ‘DiscountStrategy’ interface.
+Additionally, the Strategy design pattern decouples the ‘Order’ class from the specifics of how discounts are calculated, making it easier to modify the code without affecting the rest of the system. This can help reduce the risk of introducing bugs or breaking existing functionality when you make changes to the code. 
+
+Advantages:
+•	The Strategy Design Pattern allows you to easily add new discounts or pormotions to the system, by creating new concrete implementations of the ‘DiscountStrategy’ interface
+•	It decouples the ‘Order’ class from the specifics of how discounts are calculated, making it easier to maintain and modify the code
+
+Disadvantages
+•	The Strategy design pattern can result in a large number of small classes, which might make the code more difficult to understand and maintain
+•	It can also make it more difficult to debug the code, since there might be many different classes involved in calculating the total price of an order
+

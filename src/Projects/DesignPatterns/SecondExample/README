@@ -1,0 +1,17 @@
+Scenario: 
+You are designing a system for a word processor that needs to display a large number of characters on the screen. You want to optimize the system to use as little memory as possible, since the character data is likely to be repeated many times.
+In this case, the Flyweight design pattern works by sharing common character data among multiple ‘CharacterFlyweight’ objects, rather than storing duplicate copies of the data in each object. 
+The ‘CharacterFactory’ class serves as a factory for creating and managing ‘CharacterFlyweight’ objects, and maintains a cache of previously created objects in a ‘Map’. 
+When a ‘CharacterFlyweight’ object is requested, the ‘CharacterFactory’ checks the cache to see if an object with the same data already exists.
+If it does, it returns the existing object. If it doesn’t, it creates a new object and adds it to the cache.
+
+The Flyweight design pattern is a good idea in this case because it allows you to optimize the system to use as little memory as possible, while still allowing you to display a large number of characters on the screen. By sharing common data in memory, which can save a significant amount of memory in cases where the data is repeated many times
+Additionally, the Flyweight design pattern can improve the performance of the system, by allowing objects to be created and accessed more quickly. Since the data is already stored in memory, there is no need to retrieve it from a slower external storage location (a database), which can reduce the overall response time of the system.
+
+Advantages:
+•	The Flyweight design pattern can significantly reduce the amount of memory used by a system, by sharing common data among multiple objects.
+•	It can also improve the performance of a system, by allowing objects to be created and accessed more quickly, since the data they contain is already stored in memory.
+
+Disadvantages:
+•	The Flyweight design pattern can be complex to implement, especially in cases where the data being shared is large or varied
+•	It may also make the code more difficult to understand and maintain, since the data is shared across multiple objects and may not be immediately visible in each object’s implementation
